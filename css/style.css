@@ -1,0 +1,230 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  /*border: 0;*/
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+body {
+  font-family: "Lato";
+  padding: 30px;
+}
+
+.about__body {
+  max-width: 823px;
+  margin: 0 auto;
+  padding: 0px 0px 50px 0px;
+  height: 1000px;
+}
+.about__header {
+  padding: 0px 0px 65px 0px;
+}
+.about__title {
+  margin: 0px 0px 30px 0px;
+}
+.about__text {
+  color: #868585;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 25.89px;
+  max-width: 688px;
+  text-align: center;
+  margin: 0 auto;
+}
+.about__row {
+  display: flex;
+  margin: 0px -15px;
+}
+.about__column {
+  flex: 0 0 33.333%;
+  padding: 0px 15px;
+}
+
+.title {
+  color: #000000;
+  font-size: 34px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 8.95px;
+  position: relative;
+  text-align: center;
+  padding: 0px 0px 35px 0px;
+}
+.title:after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  bottom: 0;
+  height: 1px;
+  background-color: #000;
+  left: 50%;
+  transform: translate(-50%, 0px);
+}
+
+.item-about__icon {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  border: 2px solid #f6f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px auto 40px;
+}
+.item-about__title {
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 3.52px;
+  text-align: center;
+  margin: 0px 0px 35px 0px;
+}
+.item-about__text {
+  color: #868585;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 26px;
+  text-align: center;
+}
+
+.animation {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.ping-pong {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  animation: ping-pong 4s ease-in-out 0s infinite alternate;
+}
+.ping-pong:nth-child(1), .ping-pong:nth-child(2), .ping-pong:nth-child(3) {
+  left: 0;
+  animation-name: ping-pong-1;
+}
+.ping-pong:nth-child(4), .ping-pong:nth-child(5), .ping-pong:nth-child(6) {
+  right: 0;
+  animation-name: ping-pong-2;
+}
+.ping-pong:nth-child(2), .ping-pong:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.ping-pong:nth-child(3), .ping-pong:nth-child(6) {
+  animation-delay: 1s;
+}
+.ping-pong:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ping-pong-1 {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 50%;
+    transform: translate(-100%, 0);
+    border-radius: 0%;
+    width: 40px;
+    height: 40px;
+    background-color: #1900ff;
+  }
+  100% {
+    top: 100%;
+    transform: translate(0, -100%);
+    border-radius: 0%;
+    width: 20px;
+    height: 20px;
+    background-color: #1900ff;
+  }
+}
+@keyframes ping-pong-2 {
+  0% {
+    right: 0;
+  }
+  50% {
+    right: 50%;
+    border-radius: 0%;
+    width: 40px;
+    height: 40px;
+    background-color: #1900ff;
+  }
+  100% {
+    top: 100%;
+    transform: translate(0, -100%);
+    border-radius: 0%;
+    width: 20px;
+    height: 20px;
+    background-color: #1900ff;
+  }
+}
